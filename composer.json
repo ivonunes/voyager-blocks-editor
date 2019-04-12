@@ -1,0 +1,27 @@
+{
+    "name": "ivonunes/voyager-blocks-editor",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivo Nunes",
+            "email": "ivonunes@me.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "^5.8",
+        "tcg/voyager": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "IvoNunes\\VoyagerBlocksEditor\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IvoNunes\\VoyagerBlocksEditor\\ServiceProvider"
+            ]
+        }
+    }
+}
