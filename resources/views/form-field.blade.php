@@ -21,7 +21,7 @@
 <script>
     window.storageUrl = "{{ Storage::url(null) }}";
 
-    window.onload = function () {
+    window.addEventListener('load', function () {
         var data = {};
 
         try {
@@ -61,5 +61,5 @@
                 });
             }
         });
-    }
+    });
 </script>
