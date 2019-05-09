@@ -5,7 +5,7 @@
        step="any"
        value="@if(isset($dataTypeContent->{$row->field})){{ old($row->field, $dataTypeContent->{$row->field}) }}@else{{old($row->field)}}@endif">
 
-<div id="editor" style="border: 1px solid #e4eaec; border-radius: 3px"></div>
+<div id="{{ $row->field }}-editor" style="border: 1px solid #e4eaec; border-radius: 3px"></div>
 
 <script src="/admin/assets/js/voyager-blocks-editor/editor.js"></script>
 <script src="/admin/assets/js/voyager-blocks-editor/header.js"></script>
@@ -19,6 +19,8 @@
 <script src="/admin/assets/js/voyager-blocks-editor/main.js"></script>
 
 <script>
+    window.storageUrl = "{{ Storage::url(null) }}";
+
     window.onload = function () {
         var data = {};
 
@@ -27,7 +29,7 @@
         } catch {}
 
         const editor = new EditorJS({
-            holderId: 'editor',
+            holderId: '{{ $row->field }}-editor',
             tools: {
                 header: Header,
                 link: LinkTool,

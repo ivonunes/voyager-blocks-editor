@@ -6,7 +6,7 @@ use TCG\Voyager\FormFields\AbstractHandler;
 
 class FormField extends AbstractHandler
 {
-    protected $codename = 'Blocks Editor';
+    protected $codename = 'blocks_editor';
 
     public function createContent($row, $dataType, $dataTypeContent, $options)
     {
